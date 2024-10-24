@@ -1,0 +1,126 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Space Grotesk';
+    }
+
+::selection {
+    color: #ffffff;
+    background-color: #19434e;
+}
+
+#container {
+    width: 100%;
+    height: 100vh;
+    background-color: #19434e;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+#to-do_block {
+    width: 500px;
+    height: 700PX;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 30px;
+    box-shadow: 3px 3px 30px #0d292f;
+}
+
+#title {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding: 20px;
+}
+
+#to-do_symbol {
+    width: 45px;
+    height: 45px;
+    display: block;
+}
+
+#typing_area {
+    display: flex;
+    border-radius: 40px;
+    background-color: #f5f6fa;
+    font-size: 40px;
+    height: 50px;
+}
+
+#input_box {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    padding-left: 20px;
+    font-size: large;
+}
+
+#addbutton {
+    background-color: #70bc80;
+    border-radius: 40px;
+    border: none;
+    outline: none;
+    width: 100px;
+    color: aliceblue;
+    font-size: large;
+    font-weight: bolder;
+    cursor: pointer;
+}
+#button:hover {
+    background-color: #7dc78d;
+}
+#ul_tasks {
+    padding: 30px;   
+    font-size: 22px;  
+    overflow-y: scroll;
+        height: 58vh;   
+}
+#ul_tasks li {
+   
+    list-style: none;
+    padding-top: 10px;
+    cursor: pointer;
+}
+#ul_tasks li::before {
+    display: inline-block;
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-image: url(SVG/unchecked.svg);
+    background-repeat: no-repeat;
+    padding-right: 10px;
+}
+
+#ul_tasks li.checked {
+  
+    text-decoration: line-through;
+}
+#ul_tasks li.checked::before {
+   
+    background-image: url(SVG/checked.svg);  
+}
+span {
+    width: 20px;
+    height: 20px;
+    float: right;
+}
+span:hover {    
+    opacity: 50%;    
+}
+
+
+/* Responsive  */
+ @media screen and (max-width: 500px) {
+    #to-do_block {
+        width: 100%;
+        height: auto;
+        max-height: 95vh;
+        
+    }    
+    #ul_tasks {
+        
+        height: 72vh; 
+    }
+ }
